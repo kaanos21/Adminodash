@@ -6,9 +6,10 @@
 
 <h2>Page Visit Update</h2>
 
-@using (Html.BeginForm("PageVisitAdd", "PageVisit", FormMethod.Post))
+@using (Html.BeginForm("PageVisitUpdate", "PageVisit", FormMethod.Post))
 {
     <div class="form-control">
+        @Html.HiddenFor(x=>x.PageId)
         @Html.LabelFor(x => x.PageName, new { @class = "form-control" })
         @Html.TextBoxFor(x => x.PageName, new { @class = "form-control" })
         <br />
