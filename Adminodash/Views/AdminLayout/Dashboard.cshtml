@@ -1,0 +1,56 @@
+﻿<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("HeadPartial","AdminLayout")
+
+<body>
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+        <a class="navbar-brand me-lg-5" href="~/Templates/Volt/html&css/index.html">
+            <img class="navbar-brand-dark" src="~/Templates/Volt/html&css/assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="~/Templates/Volt/html&css/assets/img/brand/dark.svg" alt="Volt logo" />
+        </a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    @Html.Action("NavBarPartial","Adminlayout")
+
+<main class="content">
+
+
+    @RenderBody()
+
+
+</main>
+
+    @Html.Action("ScriptPartial","AdminLayout")
+
+
+</body>
+
+</html>
+
+

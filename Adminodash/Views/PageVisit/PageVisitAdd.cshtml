@@ -1,0 +1,26 @@
+﻿@model Adminodash.Entities.PageVisit
+@{
+    ViewBag.Title = "PageVisitAdd";
+    Layout = "~/Views/AdminLayout/Dashboard.cshtml";
+}
+
+<h2>Sayfa Veri Ekleme</h2>
+
+@using (Html.BeginForm("PageVisitAdd", "PageVisit", FormMethod.Post))
+{
+<div class="form-control">
+    @Html.LabelFor(x => x.PageName, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.PageName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PageViews, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.PageViews, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PageValue, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.PageValue, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BounceRate, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.BounceRate, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Yeni Sayfa Verisi Ekle</button>
+</div>
+}
